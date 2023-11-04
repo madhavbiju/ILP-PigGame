@@ -45,30 +45,40 @@ function buttonClick() {
 
 // Aljo Result
 
-var flag = 0;
+// var flag = 0;
+var score0 = 0;
+var score1 = 0;
 function btnHold() {
-  if (flag == 0) {
-    var current0 = document.getElementById('current--0');
-    var score0 = score0 + current0;
-    flag = 1;
-    current0 = 0;
+  if (activePlayer == 0) {
+    // var current0 = document.getElementById('current--0');
+    score0 = score0 + currentScore;
+    activePlayer = 1;
+    currentScore = 0;
     // console.log(score0);
-  } else if (flag == 1) {
-    var current1 = document.getElementById('current--1');
-    var score1 = score1 + current1;
-    flag = 0;
-    current1 = 0;
+    document.getElementById('score--0').textContent = `${score0}`;
+    document.getElementById('current--0').textContent = `${currentScore}`;
+    // document.getElementById('score--0') = score0;
+    // console.log(score0);
+    changeColor(activePlayer);
+  } else if (activePlayer == 1) {
+    // var current1 = document.getElementById('current--1');
+
+    score1 = score1 + currentScore;
+    activePlayer = 0;
+    currentScore = 0;
+    document.getElementById('score--1').textContent = `${score1}`;
+    document.getElementById('current--1').textContent = `${currentScore}`;
+    changeColor(activePlayer);
   }
 }
-console.log(score0);
 
 // Mathew Visual
 
 function changeColor(flag) {
   if (flag == 0) {
-    var p1 = document.querySelector(`.player--0`);
+    var p1 = document.querySelector(`.player--1`);
     p1.classList.remove('player--active');
-    var p2 = document.querySelector(`.player--1`);
+    var p2 = document.querySelector(`.player--0`);
     p2.classList.add('player--active');
   } else {
     var p2 = document.querySelector(`.player--0`);
