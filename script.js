@@ -24,7 +24,6 @@ function rollDice() {
     }
   }
 }
-rollButton.addEventListener('click', rollDice);
 
 // Navya Dice Image
 
