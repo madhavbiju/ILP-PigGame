@@ -17,10 +17,26 @@ function rollDice() {
   if (isPlaying) {
     dice = Math.floor(Math.random() * 6) + 1;
     diceRoll(dice);
+    console.log(score0);
+
     if (dice !== 1) {
       currentScore += dice;
       document.getElementById('current--' + activePlayer).textContent =
         currentScore;
+    } else if (dice == 1) {
+      if (activePlayer == 1) {
+        currentScore = 0;
+        document.getElementById('current--' + activePlayer).textContent =
+          currentScore;
+        activePlayer = 0;
+        changeColor(activePlayer);
+      } else if (activePlayer == 0) {
+        currentScore = 0;
+        document.getElementById('current--' + activePlayer).textContent =
+          currentScore;
+        activePlayer = 1;
+        changeColor(activePlayer);
+      }
     }
   }
 }
@@ -56,6 +72,13 @@ function btnHold() {
     // document.getElementById('score--0') = score0;
     // console.log(score0);
     changeColor(activePlayer);
+    if (score0 >= 100) {
+      var w1 = document.querySelector(`.player--0`);
+      w1.classList.add('player--winner');
+    } else if (score1 >= 100) {
+      var w2 = document.querySelector(`.player--1`);
+      w2.classList.add('player--winner');
+    }
   } else if (activePlayer == 1) {
     // var current1 = document.getElementById('current--1');
 
@@ -65,6 +88,13 @@ function btnHold() {
     document.getElementById('score--1').textContent = `${score1}`;
     document.getElementById('current--1').textContent = `${currentScore}`;
     changeColor(activePlayer);
+    if (score0 >= 100) {
+      var w1 = document.querySelector(`.player--0`);
+      w1.classList.add('player--winner');
+    } else if (score1 >= 100) {
+      var w2 = document.querySelector(`.player--1`);
+      w2.classList.add('player--winner');
+    }
   }
 }
 
