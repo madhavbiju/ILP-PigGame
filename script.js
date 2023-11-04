@@ -1,4 +1,4 @@
-// Ashna
+// Ashna Randomizer
 
 document.addEventListener('DOMContentLoaded', function () {
   let scores, currentScore, activePlayer, isPlaying;
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
   rollButton.addEventListener('click', rollDice);
 });
 
-// Navya
+// Navya Dice Image
 
 // JavaScript code
 const myImg = document.getElementById('dice');
@@ -47,11 +47,10 @@ function buttonClick() {
   else if (randomValue == 3) myImg.src = 'assets/dice-3.png';
   else if (randomValue == 4) myImg.src = 'assets/dice-4.png';
   else if (randomValue == 5) myImg.src = 'assets/myImg-5.png';
-  else if (randomValue==6) myImg.src = 'assets/dice-6.png';
-  
+  else if (randomValue == 6) myImg.src = 'assets/dice-6.png';
 }
 
-// Aljo
+// Aljo Result
 
 var flag = 0;
 function btnHold() {
@@ -70,7 +69,7 @@ function btnHold() {
 }
 console.log(score0);
 
-// Mathew
+// Mathew Visual
 
 function changeColor(flag) {
   if (flag == 0) {
