@@ -16,7 +16,7 @@ isPlaying = true;
 function rollDice() {
   if (isPlaying) {
     dice = Math.floor(Math.random() * 6) + 1;
-
+    diceRoll(dice);
     if (dice !== 1) {
       currentScore += dice;
       document.getElementById('current--' + activePlayer).textContent =
@@ -26,19 +26,16 @@ function rollDice() {
 }
 
 // Navya Dice Image
-
-// JavaScript code
 const myImg = document.getElementById('dice');
+// JavaScript code
 
-let randomValue = 6;
-// console.log(randomValue)
-function buttonClick() {
+function diceRoll(randomValue) {
   const myImg = document.querySelector('img');
   if (randomValue == 1) myImg.src = 'assets/dice-1.png';
   else if (randomValue == 2) myImg.src = 'assets/dice-2.png';
   else if (randomValue == 3) myImg.src = 'assets/dice-3.png';
   else if (randomValue == 4) myImg.src = 'assets/dice-4.png';
-  else if (randomValue == 5) myImg.src = 'assets/myImg-5.png';
+  else if (randomValue == 5) myImg.src = 'assets/dice-5.png';
   else if (randomValue == 6) myImg.src = 'assets/dice-6.png';
 }
 
