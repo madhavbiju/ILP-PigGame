@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // JavaScript code
 const myImg = document.getElementById('dice');
 
-let randomValue = 6;
+let randomValue = 3;
 // console.log(randomValue)
 function buttonClick() {
   const myImg = document.querySelector('img');
