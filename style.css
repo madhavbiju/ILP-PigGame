@@ -23,17 +23,44 @@ body {
 }
 
 /* LAYOUT */
-main {
+.main {
   position: relative;
-  width: 100rem;
-  height: 60rem;
+  width: 80%;
+  height: 100%;
   background-color: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(200px);
   filter: blur();
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
-  border-radius: 9px;
   overflow: hidden;
   display: flex;
+}
+
+.drawer {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.branding {
+  margin-top: 30px;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#pigmoji {
+  font-size: 100px;
+}
+
+.funcs {
+  height: 50%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .player {
@@ -101,9 +128,9 @@ main {
 
 /* ABSOLUTE POSITIONED ELEMENTS */
 .btn {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  border-radius: 2px;
+  width: 100%;
+  margin: 10px;
   color: #444;
   background: none;
   border: none;
@@ -119,7 +146,7 @@ main {
   backdrop-filter: blur(10px);
 
   padding: 0.7rem 2.5rem;
-  border-radius: 50rem;
+
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
 
@@ -129,18 +156,8 @@ main {
   margin-right: 0.7rem;
 }
 
-.btn--new {
-  top: 4rem;
-}
-.btn--roll {
-  top: 39.3rem;
-}
-.btn--hold {
-  top: 46.1rem;
-}
-
 .btn:active {
-  transform: translate(-50%, 3px);
+  transform: translateY(4px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
 }
 
@@ -149,11 +166,10 @@ main {
 }
 
 .dice {
-  position: absolute;
-  left: 50%;
-  top: 16.5rem;
-  transform: translateX(-50%);
+  border-radius: 2px;
   height: 10rem;
+  width: 10rem;
+  margin-bottom: 20px;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
 }
 

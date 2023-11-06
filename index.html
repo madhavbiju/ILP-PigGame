@@ -8,7 +8,7 @@
     <title>Pig Game</title>
   </head>
   <body>
-    <main>
+    <div class="main">
       <section class="player player--0 player--active">
         <h2 class="name" id="name--0">Player 1</h2>
         <p class="score" id="score--0">0</p>
@@ -25,13 +25,22 @@
           <p class="current-score" id="current--1"></p>
         </div>
       </section>
-      <img src="assets/dice-5.png" alt="Playing dice" class="dice" />
-      <button class="btn btn--new" onclick="window.location.reload(true)">
-        🔄 New game
-      </button>
-      <button onclick="rollDice()" class="btn btn--roll">🎲 Roll dice</button>
-      <button class="btn btn--hold" onclick="btnHold()">📥 Hold</button>
-    </main>
+    </div>
+    <div class="drawer">
+      <div class="branding">
+        <p id="pigmoji">🐷</p>
+        <h2 class="name">Pig Game</h2>
+        <p class="current-label">by Team Zeta</p>
+      </div>
+      <div class="funcs">
+        <img src="assets/dice-5.png" alt="Playing dice" class="dice" />
+        <button class="btn btn--new" onclick="window.location.reload(true)">
+          🔄 New game
+        </button>
+        <button onclick="rollDice()" class="btn btn--roll">🎲 Roll dice</button>
+        <button class="btn btn--hold" onclick="btnHold()">📥 Hold</button>
+      </div>
+    </div>
     <script src="/script.js"></script>
   </body>
 </html>
