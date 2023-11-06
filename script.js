@@ -1,4 +1,6 @@
 // Ashna Randomizer
+document.getElementById('name--0').textContent = prompt('Enter Player 1 Name:');
+document.getElementById('name--1').textContent = prompt('Enter Player 2 Name:');
 
 var scores, currentScore, activePlayer, isPlaying, dice;
 
@@ -75,9 +77,13 @@ function btnHold() {
     if (score0 >= 100) {
       var w1 = document.querySelector(`.player--0`);
       w1.classList.add('player--winner');
+      var winner = document.getElementById('name--0').textContent;
+      alert(`${winner} is the winner!!!`);
     } else if (score1 >= 100) {
       var w2 = document.querySelector(`.player--1`);
       w2.classList.add('player--winner');
+      var winner = document.getElementById('name--1').textContent;
+      alert(`${winner} is the winner!!!`);
     }
   } else if (activePlayer == 1) {
     // var current1 = document.getElementById('current--1');
@@ -91,9 +97,13 @@ function btnHold() {
     if (score0 >= 100) {
       var w1 = document.querySelector(`.player--0`);
       w1.classList.add('player--winner');
+      var winner = document.getElementById('name--0').textContent;
+      alert(`${winner} is the winner!!!`);
     } else if (score1 >= 100) {
       var w2 = document.querySelector(`.player--1`);
       w2.classList.add('player--winner');
+      var winner = document.getElementById('name--1').textContent;
+      alert(`${winner} is the winner!!!`);
     }
   }
 }
