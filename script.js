@@ -1,6 +1,8 @@
 // Ashna Randomizer
-document.getElementById('name--0').textContent = prompt('Enter Player 1 Name:');
-document.getElementById('name--1').textContent = prompt('Enter Player 2 Name:');
+document.getElementById('name--0').textContent =
+  '🐷' + prompt('Enter Player 1 Name:');
+document.getElementById('name--1').textContent =
+  '🐗' + prompt('Enter Player 2 Name:');
 
 var scores, currentScore, activePlayer, isPlaying, dice;
 
@@ -66,6 +68,7 @@ function btnHold() {
   if (activePlayer == 0) {
     // var current0 = document.getElementById('current--0');
     score0 = score0 + currentScore;
+    updateProgressBar();
     activePlayer = 1;
     currentScore = 0;
     // console.log(score0);
@@ -89,6 +92,7 @@ function btnHold() {
     // var current1 = document.getElementById('current--1');
 
     score1 = score1 + currentScore;
+    updateProgressBar();
     activePlayer = 0;
     currentScore = 0;
     document.getElementById('score--1').textContent = `${score1}`;
@@ -121,5 +125,26 @@ function changeColor(flag) {
     p2.classList.remove('player--active');
     var p1 = document.querySelector(`.player--1`);
     p1.classList.add('player--active');
+  }
+}
+
+// Madhav ProgressBar
+
+function updateProgressBar() {
+  if (activePlayer == 0) {
+    const progressLine = document.getElementById('progress');
+    const emoji = document.querySelector('.emoji');
+    console.log('Progress!');
+    const progressBarWidth = score0 + '%';
+    progressLine.style.width = progressBarWidth;
+    emoji.style.left = progressBarWidth;
+  }
+  if (activePlayer == 1) {
+    const progressLine = document.getElementById('progress1');
+    const emoji = document.querySelector('.emoji1');
+    console.log('Progress!');
+    const progressBarWidth = score1 + '%';
+    progressLine.style.width = progressBarWidth;
+    emoji.style.left = progressBarWidth;
   }
 }
