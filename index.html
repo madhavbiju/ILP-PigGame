@@ -8,37 +8,57 @@
     <title>Pig Game</title>
   </head>
   <body>
-    <div class="main">
-      <section class="player player--0 player--active">
-        <h2 class="name" id="name--0"></h2>
-        <p class="score" id="score--0">0</p>
-        <div class="current">
-          <p class="current-label">Current</p>
-          <p class="current-score" id="current--0">5</p>
+    <div class="main-container">
+      <div class="score-progress">
+        <div class="score-board">
+          <section class="player player--0 player--active">
+            <h2 class="name" id="name--0"></h2>
+            <p class="score" id="score--0">0</p>
+            <div class="current">
+              <p class="current-label">Current</p>
+              <p class="current-score" id="current--0">5</p>
+            </div>
+          </section>
+          <section class="player player--1">
+            <h2 class="name" id="name--1">🐗</h2>
+            <p class="score" id="score--1">0</p>
+            <div class="current">
+              <p class="current-label">Current</p>
+              <p class="current-score" id="current--1"></p>
+            </div>
+          </section>
         </div>
-      </section>
-      <section class="player player--1">
-        <h2 class="name" id="name--1"></h2>
-        <p class="score" id="score--1">0</p>
-        <div class="current">
-          <p class="current-label">Current</p>
-          <p class="current-score" id="current--1"></p>
+        <div class="progress">
+          <div class="progress-container">
+            <div class="progress-bar" id="myProgressBar">
+              <span class="emoji">🐷</span>
+              <div class="progress-line" id="progress"></div>
+            </div>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar" id="myProgressBar">
+              <span class="emoji1">🐗</span>
+              <div class="progress-line" id="progress1"></div>
+            </div>
+          </div>
         </div>
-      </section>
-    </div>
-    <div class="drawer">
-      <div class="branding">
-        <p id="pigmoji">🐷</p>
-        <h2 class="name" style="color: black">Pig Game</h2>
-        <p class="current-label">by Team Zeta</p>
       </div>
-      <div class="funcs">
-        <img src="assets/dice-5.png" alt="Playing dice" class="dice" />
-        <button class="btn btn--new" onclick="window.location.reload(true)">
-          🔄 New game
-        </button>
-        <button onclick="rollDice()" class="btn btn--roll">🎲 Roll dice</button>
-        <button class="btn btn--hold" onclick="btnHold()">📥 Hold</button>
+      <div class="drawer">
+        <div class="branding">
+          <p id="pigmoji">🐷</p>
+          <h2 class="name" style="color: black">Pig Game</h2>
+          <p class="current-label">by Team Zeta</p>
+        </div>
+        <div class="funcs">
+          <img src="assets/dice-5.png" alt="Playing dice" class="dice" />
+          <button class="btn btn--new" onclick="window.location.reload(true)">
+            🔄 New game
+          </button>
+          <button onclick="rollDice()" class="btn btn--roll">
+            🎲 Roll dice
+          </button>
+          <button class="btn btn--hold" onclick="btnHold()">📥 Hold</button>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>
